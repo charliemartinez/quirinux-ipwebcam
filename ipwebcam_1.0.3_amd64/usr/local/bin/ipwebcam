@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /usr/local/bin
+python3 ./ipwebcam.py
+
