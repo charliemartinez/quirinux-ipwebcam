@@ -11,7 +11,7 @@ Comment[pt]=Usar o telefone como webcam
 
 
 Icon=/usr/share/icons/ipwebcam.png
-Exec=ipwebcam
+Exec=sudo ipwebcam
 Type=Application
 Categories=Video;
 Terminal=false
