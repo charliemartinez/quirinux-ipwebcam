@@ -5,7 +5,8 @@ Virtual camera to use a mobile phone as a webcam. You need to install the IP Web
 Don't work with guvcview, but *works in Tahoma2D.*
 
 
-![quirinux ip webcam](https://github.com/user-attachments/assets/bfbaef63-b7b7-4d8f-a981-ef8f9c96a646)
+![ip-webcam](https://github.com/user-attachments/assets/f605bf2f-5f4b-478f-b641-73a83f8838de)
+
 
 ## How to use
 
