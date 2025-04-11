@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -e
+
+#!/bin/bash
+
+# Ruta destino
+DEST="/usr/share/icons/notify.png"
+
+# Ruta origen
+SRC="/tmp/notify.png"
+
+# Verifica si el archivo de destino ya existe
+if [[ -f "$DEST" ]]; then
+  echo "Icon found in $DEST."
+else
+  if [[ -f "$SRC" ]]; then
+    cp "$SRC" "$DEST"
+  else
+    echo "Icon $SRC not found."
+  fi
+fi
+
+
+chmod 440 /etc/sudoers.d/ipwebcam
+

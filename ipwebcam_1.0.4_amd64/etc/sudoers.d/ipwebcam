@@ -1,0 +1,7 @@
+ALL ALL=NOPASSWD: /sbin/modprobe v4l2loopback*
+ALL ALL=NOPASSWD: /sbin/rmmod v4l2loopback
+ALL ALL=NOPASSWD: /usr/bin/apt install -y v4l2loopback-dkms
+ALL ALL=NOPASSWD: /usr/bin/dnf install -y v4l2loopback
+ALL ALL=NOPASSWD: /usr/bin/pacman -S --noconfirm v4l2loopback-dkms
+ALL ALL=NOPASSWD: /usr/local/bin/ipwebcam
+

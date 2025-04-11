@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+
+
+chmod 440 /etc/sudoers.d/ipwebcam
+

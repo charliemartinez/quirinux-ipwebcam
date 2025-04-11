@@ -1,0 +1,111 @@
+#!/bin/bash
+
+function _help_es {
+  notify-send -u normal -i "/usr/share/icons/notify.png" "CÁMARA DEL TELÉFONO, CÓMO USAR" \
+"☛ Primero, instala la app IP WEBCAM en tu móvil.  
+☛ Luego, ábrela y pulsa “Iniciar servidor” (abajo del todo).  
+☛ Después, introduce la IP de tu teléfono en la Quirinux IP Webcam.  
+  Se cargarán los módulos necesarios (haz clic en aceptar), y finalmente  
+  se te notificará que la cámara está conectada
+  (en tu móvil verás “video connections: 1”).  
+☛ Ahora puedes seleccionar PhoneCam en Tahoma2D
+  (pulsa Refresh si no aparece)."
+}
+
+function _help_en {
+  notify-send -u normal -i "/usr/share/icons/notify.png" "PHONE CAMERA, HOW TO USE" \
+"☛ First, install the IP WEBCAM app on your phone.  
+☛ Then, open it and tap “Start server” (at the very bottom).  
+☛ After that, enter your phone’s IP address into Quirinux IP Webcam.  
+  The required modules will be loaded (click accept), and finally  
+  you will be notified that the camera is connected 
+  (on your phone you’ll see “video connections: 1”).  
+☛ Now you can select PhoneCam in Tahoma2D 
+  (press Refresh if it doesn't appear)."
+}
+
+function _help_gl {
+  notify-send -u normal -i "/usr/share/icons/notify.png" "CÁMARA DO TELÉFONO, COMO USAR" \
+"☛ Primeiro, instala a app IP WEBCAM no teu móbil.  
+☛ Despois, ábrea e preme en “Iniciar servidor” (ao fondo de todo).  
+☛ Logo, introduce a IP do teu móbil en Quirinux IP Webcam.  
+  Cargaranse os módulos necesarios (preme en aceptar), e finalmente  
+  notificarase que a cámara está conectada
+  (no móbil verás “video connections: 1”).  
+☛ Agora podes seleccionar PhoneCam en Tahoma2D 
+  (preme Refresh se non aparece)."
+}
+
+function _help_pt {
+  notify-send -u normal -i "/usr/share/icons/notify.png" "CÂMERA DO TELEFONE, COMO USAR" \
+"☛ Primeiro, instale o app IP WEBCAM no seu celular.  
+☛ Depois, abra e toque em “Iniciar servidor” (lá embaixo).  
+☛ Em seguida, insira o IP do seu celular no Quirinux IP Webcam.  
+  Os módulos necessários serão carregados (clique em aceitar), e finalmente  
+  você será notificado de que a câmera está conectada
+  (no celular verá “video connections: 1”).  
+☛ Agora você pode selecionar PhoneCam no Tahoma2D 
+  (clique em Refresh se não aparecer)."
+}
+
+function _help_fr {
+  notify-send -u normal -i "/usr/share/icons/notify.png" "CAMÉRA DU TÉLÉPHONE, COMMENT FAIRE" \
+"☛ D’abord, installez l’app IP WEBCAM sur votre téléphone.  
+☛ Ensuite, ouvrez-la et appuyez sur “Démarrer le serveur” (tout en bas).  
+☛ Puis, entrez l’adresse IP de votre téléphone dans Quirinux IP Webcam.  
+  Les modules nécessaires seront chargés (cliquez sur accepter), et enfin  
+  vous serez notifié que la caméra est connectée
+  (sur votre téléphone, vous verrez “video connections: 1”).  
+☛ Maintenant, vous pouvez sélectionner PhoneCam dans Tahoma2D
+  (cliquez sur Refresh si elle n’apparaît pas)."
+}
+
+function _help_it {
+  notify-send -u normal -i "/usr/share/icons/notify.png" "FOTOCAMERA DEL TELEFONO, COME USARE" \
+"☛ Prima, installa l’app IP WEBCAM sul tuo telefono.  
+☛ Poi aprila e tocca “Avvia server” (in fondo alla schermata).  
+☛ Dopo, inserisci l’indirizzo IP del telefono in Quirinux IP Webcam.  
+  Verranno caricati i moduli necessari (clicca su accetta), e infine  
+  riceverai una notifica che la fotocamera è connessa
+  (sul telefono vedrai “video connections: 1”).  
+☛ Ora puoi selezionare PhoneCam in Tahoma2D
+  (clicca su Refresh se non appare)."
+}
+
+function _help_de {
+  notify-send -u normal -i "/usr/share/icons/notify.png" "HANDYKAMERA, ANWENDUNG" \
+"☛ Installiere zuerst die App IP WEBCAM auf deinem Handy.  
+☛ Öffne sie dann und tippe auf „Server starten“ (ganz unten).  
+☛ Danach gibst du die IP-Adresse deines Handys in Quirinux IP Webcam ein.  
+  Die benötigten Module werden geladen (auf „Akzeptieren“ klicken), und schließlich  
+  wirst du benachrichtigt, dass die Kamera verbunden ist
+  (auf dem Handy steht „video connections: 1“).  
+☛ Jetzt kannst du PhoneCam in Tahoma2D auswählen
+  (klicke auf Refresh, wenn es nicht erscheint)."
+}
+
+function _lang() 
+{
+  # Obtener la variable original de LANG del sistema (antes de recortarla)
+  ORIGINAL_LANG=$(locale | grep ^LANG= | cut -d= -f2)
+  SHORT_LANG=$(echo "$ORIGINAL_LANG" | cut -d_ -f1)
+
+  case "$SHORT_LANG" in
+    es) _help_es ;;
+    en) _help_en ;;
+    gl) _help_gl ;;
+    pt) _help_pt ;;
+    fr) _help_fr ;;
+    it) _help_it ;;
+    de) _help_de ;;
+    *)  _help_en ;;
+  esac
+
+  export LANG="$ORIGINAL_LANG"
+  export LC_ALL="$ORIGINAL_LANG"
+
+  cd /usr/local/bin
+  python3 ./ipwebcam.py
+}
+
+_lang
