@@ -1,5 +1,6 @@
 # 📸 quirinux-ipwebcam
-(c) Charlie Martínez - Quirinux GNU/Linux, BSD 3-Clause "New" or "Revised" License 
+(c) Charlie Martínez - Quirinux GNU/Linux
+License: BSD 3-Clause "New" or "Revised" License 
 
 ## 🇪🇸 Español  
 Convierte tu móvil en una cámara web virtual. Solo necesitas instalar la app **IP Webcam** en tu teléfono y pulsar **“Start server”** (la última opción, al final del menú).  
