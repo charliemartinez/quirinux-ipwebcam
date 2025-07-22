@@ -7,7 +7,7 @@ License: BSD 3-Clause "New" or "Revised" License
 Convierte tu móvil en una cámara web virtual. Solo necesitas instalar la app **IP Webcam** en tu teléfono y pulsar **“Start server”** (la última opción, al final del menú).  
 
 ❌ *No funciona con Guvcview*  
-✅ *Funciona correctamente en **Tahoma2D***  
+✅ *Funciona correctamente en **Tahoma2D**  y en **TupiTube***
 
 ![quirinux-ipwebcam](https://github.com/user-attachments/assets/016b3f9e-5dff-496d-b035-f355e894aaa7)
 
@@ -31,7 +31,7 @@ Este proyecto forma parte del ecosistema **Quirinux**, pero puede utilizarse en 
 Use your smartphone as a virtual webcam. Just install the **IP Webcam** app on your phone and tap **“Start server”** (last option in the menu).  
 
 ❌ *Does not work with Guvcview*  
-✅ *Works correctly in **Tahoma2D***  
+✅ *Works correctly in **Tahoma2D** and TupiTube*  
 
 ![quirinux-ipwebcam](https://github.com/user-attachments/assets/016b3f9e-5dff-496d-b035-f355e894aaa7)
 
