@@ -1,5 +1,6 @@
 # 📸 quirinux-ipwebcam
 (c) Charlie Martínez - Quirinux GNU/Linux
+
 License: BSD 3-Clause "New" or "Revised" License 
 
 ## 🇪🇸 Español  
